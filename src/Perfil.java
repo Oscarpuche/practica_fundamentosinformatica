@@ -1,6 +1,6 @@
 public class Perfil {
-    
-    // Nombramos los atributos privados necesarios para la clase Perfil
+
+    // Nombramos los atributos privados (no queremos que se puedan cambiar desde fuera) necesarios para la clase Perfil
     private String nombre;
     private String idUsuario;
     private String password;
@@ -13,12 +13,13 @@ public class Perfil {
     public Perfil() {
     }
     
-    /* Constructor con parámetros de la clase Perfil para inicializar el nombre y la contraseña (Etapa2)
-    public Perfil(String nombre, String password) {
+    // Constructor con parámetros de la clase Perfil para inicializar el nombre y la contraseña (Etapa2)
+    public Perfil(String nombre, String idUsuario, String password, String URL) {
         this.nombre = nombre;
         this.password = password;
+        this.idUsuario = idUsuasrio;
+        this.URL = URL;
     }
-    */
 
     // Escribimos los métodos get y set para cada atributo de esta clase
     public String getNombre() {
@@ -37,6 +38,7 @@ public class Perfil {
     public void setIdUsuario(String idUsuario) {
         this.idUsuario = idUsuario;
         this.URL = "https://www.miRed.com/" + idUsuario; // Generamos la URL automáticamente a partir del idUsuario
+        
     }
 
     public String getPassword() {
@@ -51,10 +53,11 @@ public class Perfil {
         return URL;
     }
 
-    //PREGUNTAR SI DEJO ESTE MÉTODO O LO GENERO AUTOMATICAMENTE CON EL IDUSUARIO 
+    /* ELIMINADO YA QUE LA URL SE CREA CON EL IDUSUARIO EN EL setIdUsusario
     public void setURL(String URL) {
         this.URL = URL;
     }
+    */
 
     public Biografia getBiografia() {
         return biografia;
