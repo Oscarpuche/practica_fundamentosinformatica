@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
 public class Perfil {
-    
-    // Nombramos los atributos privados necesarios para la clase Perfil
+
+    // Nombramos los atributos privados (no queremos que se puedan cambiar desde fuera) necesarios para la clase Perfil
     private String nombre;
     private String idUsuario;
     private String password;
@@ -31,6 +31,7 @@ public class Perfil {
     public void setIdUsuario(String idUsuario) {
         this.idUsuario = idUsuario;
         this.URL = "https://www.miRed.com/" + idUsuario; // Generamos la URL automáticamente a partir del idUsuario
+        
     }
 
     public String getURL() {return URL;}
