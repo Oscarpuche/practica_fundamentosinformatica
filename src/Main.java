@@ -45,17 +45,24 @@ public class Main {
         Date fechas[] = {new Date(90, 0, 1), new Date(85, 5, 15), new Date(92, 10, 30),new Date(88, 3, 20)};
         String aficiones[] = {"Cocinar", "Viajar", "Deportes", "Lectura"};
         String profesiones[] = {"Chef", "Turista", "Atleta", "Escritor"};
-        String Post[] = {"Hola a todos!", "¡Qué día tan maravilloso!", "¿Alguien quiere salir a correr?", "Acabo de terminar un libro increíble."};
+        String posts[] = {"Hola a todos!", "¡Qué día tan maravilloso!", "¿Alguien quiere salir a correr?", "Acabo de terminar un libro increíble."};
 
         for (int i = 0; i < nuevosUsuarios.length; i++) {
             Perfil p = new Perfil(nuevosUsuarios[i], passwords[i]);
             Biografia b = new Biografia(fechas[i], aficiones[i], profesiones[i], "Objetivo de " + nuevosUsuarios[i]);
             p.setBiografia(b);
             r.añadirPerfil(p); 
-            r.añadirPost("user" + (i + 1), Post[i]);
+            r.añadirPost("user" + (i + 1), posts[i]);
         }
 
         // Visualizamos la red social completa
         r.visualizarRed();
+        System.out.println("-------------");
+        r.visualizarPerfil("user56");
+        System.out.println("-------------");
+        r.visualizarPerfil("user1");
+        System.out.println("-------------");
+        r.comprobarPassword("user1", "migato");
+        // r.visualizarPerfiles();
     }
 }

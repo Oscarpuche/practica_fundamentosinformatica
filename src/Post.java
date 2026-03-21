@@ -18,19 +18,7 @@ public class Post {
         this.fecha = new Date();
     }
 
-    // --- Métodos Getter y Setter ---
-
-    public String getMensaje() {
-        return mensaje;
-    }
-
-    public void setMensaje(String mensaje) {
-        this.mensaje = mensaje;
-    }
-
-    public Date getFecha() {
-        return fecha;
-    }
+    public Date getFecha() {return fecha;}
 
     /**
      * Método para imprimir el post con un formato elegante.
@@ -40,7 +28,6 @@ public class Post {
         // Usamos SimpleDateFormat para que la fecha no se vea como un código extraño
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy HH:mm");
         String fechaFormateada = formato.format(fecha);
-        
-        System.out.println("      [" + fechaFormateada + "] - " + mensaje);
+        System.out.println("      [" + fechaFormateada + "] : " + mensaje);
     }
 }
