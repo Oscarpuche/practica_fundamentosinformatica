@@ -5,6 +5,8 @@ import java.text.SimpleDateFormat;
  * Clase que representa un mensaje publicado por un usuario
  * @param mensaje El contenido del post
  * @param fecha La fecha y hora en que se creó el post
+ * @param url La URL única de cada post
+ * @author Óscar García Puche
  */
 public class Post {
     private String mensaje;
@@ -20,14 +22,14 @@ public class Post {
         this.fecha = new Date(); // Capturamos la fecha y hora actual en el momento de crear el post
     }
 
-    // public Date getFecha() {return fecha;} ahora mismo no es necesario pero se escribe para la etapa 3
+    /**
+     * Métodos get y set para los atributos de la clase Post
+     */
+    public Date getFecha() {return fecha;} //Ahora mismo no es necesario pero se escribe para la etapa 3
     public void setURL(String url) {this.url = url;}
     public String getURL() {return url;}
+    public String getMensaje() {return mensaje;} // Se ha añadido un método para obtener el mensaje y poder imprimirlo junto con la URL en el perfil
 
-    // Se ha añadido un método para obtener el mensaje y poder imprimirlo junto con la URL en el perfil
-    public String getMensaje() {
-    return mensaje;
-}
     /**
      * Método para imprimir el post con un formato legible (dd/MM/yyyy HH:mm).
      */

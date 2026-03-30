@@ -1,0 +1,46 @@
+MAIN:
+/* VERSION BRUTA PARA INICIALIZAR PERFILES
+        // Creamos el perfil 1 y la biografía asociada
+        Perfil p1 = new Perfil("Pedro Gonzalez", "migatoluis0");
+        Biografia b = new Biografia();
+        Date fecha = new Date(74, 10, 17);
+        b.setFechaDeNacimiento(fecha);
+        b.setAficiones("los gatos");
+        b.setProfesion("Informatico");
+        b.setObjetivosVitales("Salvar animales");
+        p1.setBiografia(b);
+
+        // Creamos el perfil 2 y la biografía asociada
+        Perfil p2 = new Perfil("Juan Perez", "lalalala");
+        Biografia b2 = new Biografia();
+        Date fecha2 = new Date(94, 2, 1);
+        b2.setFechaDeNacimiento(fecha2);
+        b2.setAficiones("Musica");
+        b2.setProfesion("Albañil");
+        b2.setObjetivosVitales("Recorrer el mundo");
+        p2.setBiografia(b2);
+
+        // Instancia de red social y añadimos los perfiles
+        MiRed r = new MiRed();
+        r.añadirPerfil(p1);
+        r.añadirPerfil(p2);
+
+        // Añadimos algunos posts a cada perfil
+        r.añadirPost("user1", "Hoy me siento bien :)");
+        r.añadirPost("user1", "Hoy me siento mal :(");
+        r.añadirPost("user2", "Hoy me siento bien :)");
+        r.añadirPost("user2", "Hoy me siento mal :(");
+        r.visualizarPerfiles();
+
+        */
+
+MIRED:
+    /* MOSTRAR DE GOLPE TODOS LOS PERFILES EN LA RED
+    public void visualizarPerfiles() {
+        System.out.println("--- LISTADO DE LA RED ---");
+        for (Perfil p : perfiles) {
+            p.imprimeInformacion();
+            System.out.println("-------------------------");
+        }
+    }
+    */

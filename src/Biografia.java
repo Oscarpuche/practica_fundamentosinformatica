@@ -1,16 +1,27 @@
 import java.util.Date;
 
+/**
+ * Clase que representa la biografía de un usuario en la red social
+ * @param fechaDeNacimiento La fecha de nacimiento del usuario
+ * @param aficiones Las aficiones del usuario
+ * @param profesion La profesión del usuario
+ * @param objetivosVitales Los objetivos vitales del usuario
+ * @author Óscar García Puche
+ */
 public class Biografia {
 
-// Nombramos los atributos privados necesarios para la clase Biografia
     private Date fechaDeNacimiento;
     private String aficiones;
     private String profesion;
     private String objetivosVitales;
 
-    public Biografia() {
-    }
-
+    /**
+     * Constructor para la clase Biografia
+     * @param fechaDeNacimiento La fecha de nacimiento del usuario
+     * @param aficiones Las aficiones del usuario
+     * @param profesion La profesión del usuario
+     * @param objetivosVitales Los objetivos vitales del usuario
+     */
     public Biografia(Date fechaDeNacimiento, String aficiones, String profesion, String objetivosVitales) {
         this.fechaDeNacimiento = fechaDeNacimiento;
         this.aficiones = aficiones;
@@ -18,7 +29,9 @@ public class Biografia {
         this.objetivosVitales = objetivosVitales;
     }
 
-    // Escribimos los métodos get y set para cada atributo de esta clase
+    /**
+     * Métodos get y set para los atributos de la clase Biografia
+     */
     public Date getFechaDeNacimiento() {return fechaDeNacimiento;}
     public void setFechaDeNacimiento(Date fechaDeNacimiento) {this.fechaDeNacimiento = fechaDeNacimiento;}
 
@@ -31,7 +44,9 @@ public class Biografia {
     public String getObjetivosVitales() {return objetivosVitales;}
     public void setObjetivosVitales(String objetivosVitales) {this.objetivosVitales = objetivosVitales;} 
 
-    // Escribimos el método para mostrar la información de la biografía (indentamos para mantener el formato del guión)
+    /**
+    * Método para imprimir la información de la biografía
+    */
     public void imprimeInformacion() {
         System.out.println("      Fecha de nacimiento: " + fechaDeNacimiento);
         System.out.println("      Profesión: " + profesion);

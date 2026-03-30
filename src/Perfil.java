@@ -1,26 +1,40 @@
 import java.util.ArrayList;
 
+/**
+ * Clase que representa a un usuario
+ * @param nombre El nombre del usuario
+ * @param idUsuario El identificador único del usuario
+ * @param password La contraseña del usuario
+ * @param URL La URL única del perfil del usuario, generada automáticamente a partir del idUsuario
+ * @param biografia La biografía del usuario
+ * @author Óscar García Puche
+
+ */
+
 public class Perfil {
 
-    // Nombramos los atributos privados (no queremos que se puedan cambiar desde fuera) necesarios para la clase Perfil
     private String nombre;
     private String idUsuario;
     private String password;
     private String URL;
-    
-    // Establecemos la relación entre las clases Perfil y Biografia a través de un atributo de tipo Biografia
     private Biografia biografia;
-
-    // Atributo de coleccion para los mensajes
     private ArrayList<Post> listaPosts;
-  
+    
+
+    /**
+     * Constructor para la clase Perfil
+     * @param nombre El nombre del usuario
+     * @param password La contraseña del usuario
+     */
     public Perfil(String nombre, String password) {
         this.nombre = nombre;
         this.password = password;
         this.listaPosts = new ArrayList<>();
     }
     
-    // Escribimos los métodos get y set para cada atributo de esta clase
+    /**
+     * Métodos get y set para los atributos de la clase Perfil
+     */
     public String getNombre() {return nombre;}
     public void setNombre(String nombre) {this.nombre = nombre;}
     
@@ -39,29 +53,33 @@ public class Perfil {
     public Biografia getBiografia() {return biografia;}
     public void setBiografia(Biografia biografia) {this.biografia = biografia;}
 
+    /**
+     * Método para añadir un post, asignarle una URL y añadirlo al arrayList de posts
+     * @param texto El contenido de texto del post
+     */
     public void añadirPost(String texto) {
         Post nuevoPost = new Post(texto);
-        int numeroPost = listaPosts.size() + 1;
-        String urlPost = "https://www.miRed.com/post/" + this.idUsuario + "." + numeroPost;
+        int numeroPost = listaPosts.size() + 1; // Comenzamos en 1 porque primero definimos URL y luego añadimos el post al arrayList
+        String urlPost = "https://www.miRed.com/post/" + this.idUsuario + "." + numeroPost; // Generamos la URL del post usando el idusuario y el nºpost
         nuevoPost.setURL(urlPost);
         listaPosts.add(nuevoPost);
     }
 
-    // Escribimos el método para mostrar la información del perfil
+    /**
+     * Método para mostrar la información del perfil
+     */
     public void imprimeInformacion() {
         System.out.println("Identificador de usuario: " + idUsuario);
         System.out.println("   Nombre: " + nombre);
         System.out.println("   URL: " + URL);
         
-        // Impresion de la biografia (llamada en cascada)
         System.out.println("   BIO:");
         biografia.imprimeInformacion();
         
-        // Impresion de los mensajes
         System.out.println("   POSTS:");
         for (Post post : listaPosts) {
             System.out.println("      " + post.getURL() + ":  " + post.getMensaje());
-            // post.imprimePost();
+            // post.imprimePost(); método alternativo para imprimir el post con fecha 
         }
     }
 }
