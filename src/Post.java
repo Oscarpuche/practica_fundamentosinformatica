@@ -8,6 +8,7 @@ import java.text.SimpleDateFormat;
  */
 public class Post {
     private String mensaje;
+    private String url;
     private Date fecha;
 
     /**
@@ -20,7 +21,13 @@ public class Post {
     }
 
     // public Date getFecha() {return fecha;} ahora mismo no es necesario pero se escribe para la etapa 3
+    public void setURL(String url) {this.url = url;}
+    public String getURL() {return url;}
 
+    // Se ha añadido un método para obtener el mensaje y poder imprimirlo junto con la URL en el perfil
+    public String getMensaje() {
+    return mensaje;
+}
     /**
      * Método para imprimir el post con un formato legible (dd/MM/yyyy HH:mm).
      */

@@ -41,6 +41,9 @@ public class Perfil {
 
     public void añadirPost(String texto) {
         Post nuevoPost = new Post(texto);
+        int numeroPost = listaPosts.size() + 1;
+        String urlPost = "https://www.miRed.com/post/" + this.idUsuario + "." + numeroPost;
+        nuevoPost.setURL(urlPost);
         listaPosts.add(nuevoPost);
     }
 
@@ -57,7 +60,8 @@ public class Perfil {
         // Impresion de los mensajes
         System.out.println("   POSTS:");
         for (Post post : listaPosts) {
-            post.imprimePost();
+            System.out.println("      " + post.getURL() + ":  " + post.getMensaje());
+            // post.imprimePost();
         }
     }
 }
