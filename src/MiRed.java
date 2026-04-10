@@ -86,7 +86,7 @@ public class MiRed {
     }
 
     /**
-     * Método para añadir un post a un perfil a partir de su ID
+     * Método para añadir un post a un perfil a partir de su ID, asegurando evitar futuros errores al eliminar/modificar perfiles.
      * @param idUsuario El identificador único del usuario al que queremos añadir el post
      * @param texto El texto del post que queremos añadir
      */
