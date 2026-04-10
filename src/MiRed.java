@@ -74,7 +74,7 @@ public class MiRed {
      * @param password La contraseña introducida por el usuario para iniciar sesión
      */
     public boolean comprobarPassword(String idUsuario, String password) {
-        Perfil p = getUsuario(idUsuario);
+        Perfil p = getUsuario(idUsuario); // Contendeor Perfil temporal para realizar la comprobación de la contraseña
         if (!p.getPassword().equals(password)) {
             System.out.println("La password es incorrecta");
             return false;
