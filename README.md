@@ -8,3 +8,5 @@ El espacio de trabajo contiene tanto el documento .pdf con las instrucciones de 
 
 # Información adicional
 Si trabajas con BlueJ, puedes descargar en una carpeta todos los archivos .java, e importarlos directamente usando la opción 'Proyecto No BlueJ' en el menú 'Proyecto'.
+
+<img width="487" height="272" alt="image" src="https://github.com/user-attachments/assets/aa10e41f-19ad-4367-a127-26a0a9cbdaf7" />

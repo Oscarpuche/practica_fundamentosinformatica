@@ -74,7 +74,7 @@ public class MiRed {
      * @param password La contraseña introducida por el usuario para iniciar sesión
      */
     public boolean comprobarPassword(String idUsuario, String password) {
-        Perfil p = getUsuario(idUsuario);
+        Perfil p = getUsuario(idUsuario); // Contendeor Perfil temporal para realizar la comprobación de la contraseña
         if (!p.getPassword().equals(password)) {
             System.out.println("La password es incorrecta");
             return false;
@@ -86,7 +86,7 @@ public class MiRed {
     }
 
     /**
-     * Método para añadir un post a un perfil a partir de su ID
+     * Método para añadir un post a un perfil a partir de su ID, asegurando evitar futuros errores al eliminar/modificar perfiles.
      * @param idUsuario El identificador único del usuario al que queremos añadir el post
      * @param texto El texto del post que queremos añadir
      */
