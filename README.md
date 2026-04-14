@@ -11,6 +11,6 @@ Si trabajas con BlueJ, puedes descargar en una carpeta todos los archivos .java,
 
 <img width="487" height="272" alt="image" src="https://github.com/user-attachments/assets/aa10e41f-19ad-4367-a127-26a0a9cbdaf7" />
 
-Por otro lado, para la generación de los diagramas de clase se ha usado una combinación de [Graphviz] (https://graphviz.org/) y [PlantUML] (https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml), de forma que obtengamos figuras como esta:
+Por otro lado, para la generación de los diagramas de clase se ha usado una combinación de [Graphviz](https://graphviz.org/) y [PlantUML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml), de forma que obtengamos figuras como esta:
 
 <img width="433" height="603" alt="diagramaetapa2" src="https://github.com/user-attachments/assets/fca33982-d291-4b35-8e86-2fe5f934ce0e" />
