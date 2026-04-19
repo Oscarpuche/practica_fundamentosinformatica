@@ -5,7 +5,7 @@ public class Main {
 
         // Instancia de la red social
         MiRed r = new MiRed();
-
+        /**
         // Creación de perfiles y biografías usando un bucle for 
         String[] Usuarios = {"Ana", "Luis", "Marta", "Carlos"};
         String[] passwords = {"password123", "password124", "password125", "password126"};
@@ -31,5 +31,14 @@ public class Main {
         r.visualizarPerfil("user1");
         System.out.println("-------------");
         r.comprobarPassword("user1", "migato");
+ */
+        PerfilProfesional p = new PerfilProfesional("Test", "123");
+        p.setOcupacion("Ingeniero");
+        p.setCurriculum("Experiencia en desarrollo de software y gestión de proyectos.");
+        // Añadimos esta línea para que la biografía no sea 'null'
+        p.setBiografia(new Biografia()); 
+        
+        // Ahora sí, debería funcionar y mostrar el título
+        p.imprimeInformacion();
     }
 }
