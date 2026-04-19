@@ -1,4 +1,4 @@
-@startuml Etapa1
+@startuml Etapa3
 class Perfil {
     - String nombre
     - String idUsuario
@@ -17,6 +17,15 @@ class Perfil {
     + void getBiografia()
     + void setBiografia (Biografia biografia)
     + void AñadirPost(String texto)
+    + void imprimeInformacion()
+}
+
+class PerfilProfesional {
+    - String curriculum
+    - String ocupacion
+
+    + void setCurriculum(String curriculum)
+    + void setOcupacion(String ocupacion)
     + void imprimeInformacion()
 }
 
@@ -60,8 +69,13 @@ class MiRed{
     + boolean comprobarPassword(String idUsuario, String password)
     + void añadirPost(String idUsuario, String texto)
 }
-MiRed o-- Perfil
-Perfil *-- Biografia
-Perfil *-- Post
+
+' Relación de Herencia (Novedad Etapa 3)
+Perfil <|-- PerfilProfesional 
+
+' Relaciones de las Etapas 1 y 2
+MiRed o-- Perfil 
+Perfil *-- Biografia 
+Perfil *-- Post 
 
 @enduml

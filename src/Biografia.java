@@ -29,6 +29,7 @@ public class Biografia {
         this.objetivosVitales = objetivosVitales;
     }
 
+    public Biografia() { }
     /**
      * Métodos get y set para los atributos de la clase Biografia
      */
