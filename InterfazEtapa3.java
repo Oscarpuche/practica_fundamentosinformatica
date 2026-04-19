@@ -40,8 +40,8 @@ public class InterfazEtapa3 {
         while (true) {
 
             System.out.println();
-            System.out.println("1) Anadir perfil");
-            System.out.println("2) Anadir post");
+            System.out.println("1) Añadir perfil");
+            System.out.println("2) Añadir post");
             System.out.println("3) Visualizar perfil");
             System.out.println("4) Salir");
             System.out.print("Opcion: ");
